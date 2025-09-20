@@ -37,3 +37,26 @@
    Installs libraries/packages into your project (node_modules).
    Adds dependencies into your package.json.
    Used for scripts you define in your project.
+
+5. **Closure**
+   A closure is a function along with references to it's lexical environment.
+   It remembers it's scope even when it's executed from outside scope.
+   UseState hook uses Closure behind the scenes
+
+   function createCounter() {
+   let count = 0; // private variable
+
+return {
+increment: () => ++count,
+decrement: () => --count,
+getValue: () => count
+};
+}
+
+const counter = createCounter();
+console.log(counter.increment()); // 1
+console.log(counter.getValue()); // 1
+👉 count is not directly accessible, only via closures.
+
+The callback functions also remembers the outer functions params
+Closures are behind array methods.
