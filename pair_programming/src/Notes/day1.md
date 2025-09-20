@@ -60,3 +60,6 @@ console.log(counter.getValue()); // 1
 
 The callback functions also remembers the outer functions params
 Closures are behind array methods.
+
+Closure 
+'Closure' property is created inside scope in browser.

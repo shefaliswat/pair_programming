@@ -1,10 +1,13 @@
+import { useState } from "react";
 import "./App.css";
-// import Closure from "./closures/closures";
+import MyClosures from "./closures/Closures";
 
-function App() {
+function App({c}) {
+  var a = 10;
+  const [appState, setAppState] = useState("b")
   return (
     <>
-      <p className="read-the-docs">{/* <Closure /> */}</p>
+      <p className="read-the-docs"><MyClosures appState={appState} a={a} /></p>
     </>
   );
 }
